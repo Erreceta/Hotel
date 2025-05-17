@@ -1,0 +1,101 @@
+body {
+    background-image: url(imagenes/Hotel.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+    /* CABECERA (header) */
+    header {
+    color: white; /* Texto en blanco */
+      padding: em; /* Espaciado interior */
+      text-align: center; /* Centra el texto */
+        font-size: 30px; /* Tamaño de fuente grande */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-shadow: 4px 4px 4px #080202; /* Sombra del texto */
+    }
+
+    /* BARRA DE NAVEGACIÓN (nav) */
+    nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;  /* Espaciado interior */
+    font-family:cursive /* Fuente */
+    font-weight: 1000; /* Peso de la fuente */      
+    font-size: 30px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+    }
+    
+    nav a {
+      color: white; /* Color del texto */
+      text-decoration: none; /* Quita el subrayado */
+      margin-right: 3em; /* Espacio entre enlaces */
+      cursor: pointer; /* Muestra la mano al pasar el mouse */
+      
+    }
+    div {
+     
+        padding: 10px; /* Espaciado interior */
+        font-family: cursive; /* Fuente */
+        font-weight: 1000; /* Peso de la fuente */  
+        font-size: 20px; /* Tamaño de la fuente */ /* Centra el texto */
+        color: white; /* Color del texto */
+        border-radius: 5px; /* Esquinas redondeadas */
+        margin: 1em; /* Espacio entre divs */
+        text-shadow: 4px 4px 4px #080202;
+    }
+
+
+    /* CUERPO PRINCIPAL (main) */
+    main {
+        display: flex; /* Usa flexbox para el diseño */
+        flex-direction: row; /* Dirección de los elementos en fila */
+        justify-content: space-between; /* Espacio entre los elementos */
+        padding: 1em; /* Espaciado interior */
+        background-color: rgba(36, 178, 197, 0.329); /* Fondo blanco con opacidad */
+    }
+    
+
+    section {
+      flex: 3; /* Ocupa 3 partes del espacio (más ancho) */
+      padding: 1em; /* Espaciado interior */
+      display: none; /* Ocultas todas las secciones por defecto */
+    }
+
+    section.active {
+      display: block; /* Muestra solo la sección activa */
+    }
+
+    /* BARRA LATERAL (aside) */
+    aside {
+        flex: 1; /* Ocupa 1 parte del espacio (más estrecho) */
+        padding: 1em; /* Espaciado interior */
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+        border-radius: 5px; /* Esquinas redondeadas */
+    }
+ 
+
+    /* ESTILOS PARA FORMULARIO */
+    form input, form textarea {
+      width: 100%; /* Ocupan todo el ancho del contenedor */
+      padding: 0.5em; /* Espaciado interior */
+      margin-bottom: 1em; /* Espacio entre campos */
+      border: 1px solid #ccc; /* Borde gris claro */
+      border-radius: 4px; /* Esquinas redondeadas */
+    }
+
+    form button {
+      padding: 0.5em 1em; /* Espaciado interno */
+      background-color: #4CAF50; /* Fondo verde */
+      color: white; /* Texto blanco */
+      border: none; /* Sin borde */
+      border-radius: 4px; /* Esquinas redondeadas */
+      cursor: pointer; /* Mano al pasar el mouse */
+    }
+    footer {
+
+      color: white; /* Texto blanco */
+      padding: 10em; /* Espaciado interior */
+        text-align:right /* Centra el texto */
+    }
+  </style>
+

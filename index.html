@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+
+    <!-- Cabecera principal con título -->
+    <header>
+      <h1>El mirador</h1> <!-- Encabezado de nivel 1 -->
+    </header>
+  
+    <!-- Menú de navegación con enlaces -->
+    <nav>
+      <!-- Evento onclick llama a función JS para cambiar de sección -->
+      <a onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a onclick="mostrarSeccion('Haitaciones')">Habitaciones</a>
+      <a onclick="mostrarSeccion('Galería')">Galería</a>
+      <a onclick="mostrarSeccion('Contacto')">Contacto</a>
+    </nav>
+  <div>
+    <!-- Contenedor principal -->
+    <main>
+  
+      <!-- Sección de inicio (visible por defecto) -->
+      <section id="inicio" class="active">
+        <h2>Hotel "El paraiso"</h2> <!-- Encabezado de nivel 2 -->
+        <p>Bienvenido a la página oficial del hotel, aquí encontrará todo lo relacionado a información acerca de precios, fotos del lugar y si desea alguna información adicional, puede comunicarse directamente con nosotros.</p> <!-- Párrafo -->
+      </section>
+  
+      <!-- Sección sobre mí -->
+      <section id="Haitaciones">
+        <h2>Suite presidencial</h2>
+        <p>300 por día</p>
+        <h2>Suite ejecutiva</h2>
+        <p>200 por día</p>
+        <h2>Habitación estandar</h2>
+        <p>150 por día</p>
+      </section>
+      <mainh2>
+  <section id="Galería">
+       <img src="imagenes/1.jpeg" width="300" height="200"> <!-- Imagen -->
+        <img src="imagenes/2.jpeg" width="350" height="200"> <!-- Imagen -->
+        <img src="imagenes/3.jpeg" width="300" height="200"> <!-- Imagen -->
+        <img src="imagenes/4.jpeg" width="350" height="200">
+        <img src="imagenes/5.jpeg" width="350" height="200"> <!-- Imagen -->
+        <img src="imagenes/6.jpeg" width="300" height="200"> <!-- Imagen -->
+        <img src="imagenes/7.jpeg" width="350" height="200"> <!-- Imagen -->
+        <img src="imagenes/8.jpeg" width="300" height="200"> <!-- Imagen -->
+      </section>
+    </mainh2>
+      <!-- Sección de contacto con formulario -->
+      <section id="Contacto">
+        <h2>Formulario de Contacto</h2>
+  
+        <!-- Formulario que ejecuta una función al enviar -->
+        <form onsubmit="enviarFormulario(event)">
+          <!-- Etiquetas para los campos -->
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required> <!-- Campo de texto -->
+  
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" required> <!-- Campo tipo email -->
+  
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" rows="4" required></textarea> <!-- Área de texto -->
+  
+          <button type="submit">Enviar</button> <!-- Botón para enviar -->
+        </form>
+  
+        <!-- Mensaje de confirmación (aparece con JS) -->
+        <p id="mensajeEnviado" style="color: green;"></p>
+      </section>
+  
+      <!-- Barra lateral con enlaces a redes sociales -->
+      
+    </main>
+  </div>
+    <!-- Pie de página -->
+   
+  
+    <!-- Script en JavaScript para funcionalidad -->
+    <script>
+      // Función para mostrar una sección específica
+      function mostrarSeccion(id) {
+        const secciones = document.querySelectorAll('section'); // Todas las secciones
+        secciones.forEach(sec => sec.classList.remove('active')); // Oculta todas
+        const activa = document.getElementById(id); // Busca la que queremos mostrar
+        if (activa) activa.classList.add('active'); // La hace visible
+      }
+  
+      // Función para manejar envío del formulario
+      function enviarFormulario(event) {
+        event.preventDefault(); // Previene el recargo de página
+        const nombre = document.getElementById('nombre').value;
+        document.getElementById('mensajeEnviado').innerText = `Gracias, ${nombre}. Tu mensaje ha sido enviado.`;
+      }
+    </script>
+
+   <footer>
+        <p>&copy; 2023 Hotel. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+  </html>
